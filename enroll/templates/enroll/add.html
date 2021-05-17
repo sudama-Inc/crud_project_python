@@ -1,0 +1,98 @@
+{% extends 'enroll/base.html' %}
+{% block content %}
+
+<div class="col-sm-7" style="margin-left:auto;margin-right:auto;margin-top:20px;">
+    <h6 class="text-center alert alert-info">Add New Record</h6>
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="form-group border border-light">
+            <div class="form-group">
+                <label for="brand">Brand Name:</label>
+                <select class="form-control" id="brand">
+                    <option>Brand Name...</option>
+                    <option>Dabur</option>
+                    <option>Amul</option>
+                    <option>MDH</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="invamt">Invoice Amount:</label>
+                <input type="text" class="form-control" id="invamt" name="invamt" placeholder="Invoice Amount">
+            </div>
+            <div class="form-group">
+                <label for="invdate">Invoice Date:</label>
+                <input type="date" class="form-control" id="invdate" name="invdate">
+            </div>
+            <div class="form-group">
+                <label for="cltnamt">Collected Amount:</label>
+                <input type="text" class="form-control" id="cltnamt" name="cltnamt" placeholder="Collected Amount">
+            </div>
+            <div class="form-group">
+                <label for="cltndate">Collection Date:</label>
+                <input type="date" class="form-control" id="cltndate" name="cltndate">
+            </div>
+            
+            <div class="form-group">
+                <label for="customer">Customer:</label>
+                <input type="text" class="form-control" id="customer" name="customer" placeholder="Customer Name">
+            </div>
+            <div class="form-group">
+                <label for="customercode">Customer Code:</label>
+                <input type="text" class="form-control" id="customercode" name="customercode" placeholder="Customer Code">
+            </div>
+            <div class="form-group">
+                <label for="collectedby">Collected By:</label>
+                <input type="text" class="form-control" id="collectedby" name="collectedby" placeholder="Enter Name">
+            </div>
+            <div class="form-group">
+                <label for="paymentmode">Payment Mode:</label>
+                <input type="text" class="form-control" id="paymentmode" name="paymentmode" placeholder="Payment Mode">
+            </div>
+            <div class="form-group">
+                <label for="cheque">Cheque / Ref. No:</label>
+                <input type="text" class="form-control" id="cheque" name="cheque" placeholder="Cheque / UPI Ref">
+            </div>
+            <div class="form-group">
+                <label for="bank">Bank Name:</label>
+                <select class="form-control" id="bank">
+                    <option>Bank Name...</option>
+                        <option>ICICI</option>
+                        <option>HDFC</option>
+                        <option>SBI</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="duedate">Due Date:</label>
+                <input type="date" class="form-control" id="duedate" name="duedate">
+            </div>
+
+        </div>
+        <h6 class="texe-sm-center">Only for Account's Department</h6>
+        <div class="form-group border border-light">
+            <div class="form-group">
+                <label for="status">Status:</label>
+                <select class="form-control" id="status">
+                    <option>Pending</option>
+                        <option>Pending</option>
+                        <option>Done</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="doptdate">Deposited Date:</label>
+                <input type="date" class="form-control" id="doptdate" name="doptdate">
+            </div>
+            <div class="form-group">
+                <label for="utrno">UTR No:</label>
+                <input type="text" class="form-control" id="utrno" name="utrno" placeholder="UTR No">
+            <div class="form-group">
+                <label for="bksc">Bank Charges:</label>
+                <input type="text" class="form-control" id="bksc" name="bksc" placeholder="Bank Charges">
+            </div>
+
+        </div>
+
+        <input type="submit" class="btn btn-success" value="Add Record">
+    </form>
+</div>
+
+{% endblock content %}
